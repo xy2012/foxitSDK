@@ -61,7 +61,7 @@
                     <ColumnDefinition Width="30*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
-                    <AppBarButton x:Uid="Camera" Icon="Camera" Label="Camera" />
+                    <AppBarButton x:Uid="Camera" Icon="Camera" Label="Camera" Click="camera_Click"/>
                     <AppBarToggleButton x:Uid="Account" Icon="Account" Label="Account"/>
                     <TextBox x:Name="word" Width="100" Height="30"></TextBox>
                     <AppBarButton Icon="Find" x:Name="Searchword" Click="Searchword_Click"></AppBarButton>
@@ -73,35 +73,45 @@
                     <AppBarToggleButton x:Uid="Remove" Icon="Remove" Label="Remove"/>
                     <AppBarSeparator/>
                     <AppBarButton x:Uid="Delete" Icon="Delete" Label="Delete" Click="closepdf_Click"/>
-
+                    <AppBarButton Icon="FullScreen"  Click="fullscreen_Click"/>
+                    
                 </StackPanel>
             </Grid>
         </AppBar>
 
     </Page.TopAppBar>
     <Page.BottomAppBar>
-        <CommandBar>
+        <AppBar Background="Transparent">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <!--  
             <CommandBar.SecondaryCommands>
-                <!--
+                
                 <AppBarButton Label="Rotate Left"  Icon="Refresh" Click="Click_BTN_RotateLeft"/>
                 <AppBarButton Label="Rotate Right" Icon="Rotate" Click="Click_BTN_RotateRight"/>
                 <AppBarButton Label="Actual Size" Icon="Add" Click="Click_BTN_ActualSize" />
                 <AppBarButton Label="Fit Width" Icon="Add" Click="Click_BTN_FitWidth" />
                 <AppBarButton Label="Fit Height" Icon="Add" Click="Click_BTN_FitHeight" />
-                -->
+               
             </CommandBar.SecondaryCommands>
-            
-            <AppBarButton Icon="Camera" Label="Search" Click="Click_PreviewPage"/>
+             -->
+                <StackPanel  Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
+                    <AppBarButton Icon="Page"  Label="page" Click="Click_PreviewPage" />
+                </StackPanel>
             <!--
             <AppBarButton Label="Previous" Icon="Back" Click="Click_BTN_PrePage"/>
             <AppBarButton Icon="Forward" Label="Next" Click="Click_BTN_NextPage"  />
             -->
-           
-            <AppBarButton Icon="ZoomIn" Label="Zoom In " Click="Click_BTN_ZoomIn" IsCompact="True"/>
-            <AppBarButton Icon="ZoomOut" Label="Zoom Out" Click="Click_BTN_ZoomOut" IsCompact="True"/>
-            <AppBarButton x:Name="note" Click="Like_Click" Icon="OpenLocal"  Label="NoteBook" IsCompact="True"/>
-            <AppBarButton x:Name="feedback" Icon="Emoji"  Label="FeedBack" IsCompact="True"/>
-
-        </CommandBar>
+                <StackPanel  Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                    <AppBarButton Icon="ZoomIn" Label="Zoom In " Click="Click_BTN_ZoomIn" />
+                    <AppBarButton Icon="ZoomOut" Label="Zoom Out" Click="Click_BTN_ZoomOut" />
+                    <AppBarButton x:Name="note" Click="Like_Click" Icon="OpenLocal"  Label="NoteBook" />
+                    <AppBarButton x:Name="feedback" Icon="Emoji"  Label="FeedBack" />
+                </StackPanel>
+            </Grid>
+        </AppBar>
     </Page.BottomAppBar>
 </Page>

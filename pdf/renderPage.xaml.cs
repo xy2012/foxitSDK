@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.Storage.Pickers;
-using Windows.Storage;
 using foxitSDK;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.ViewManagement;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 /*
@@ -62,6 +57,7 @@ namespace pdf
 	
     public sealed partial class renderPage : Page
     {
+        
 
         int rSelectPageStartIndex;
         int rSelectPageEndIndex;
@@ -1561,6 +1557,32 @@ namespace pdf
                     gri.Visibility = Visibility.Collapsed;
                 }
 
+            }
+        }
+
+        private void camera_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void fullscreen_Click(object sender, RoutedEventArgs e)
+        {
+            var view = ApplicationView.GetForCurrentView();
+            if (view.IsFullScreenMode)
+            {
+                view.ExitFullScreenMode();
+                
+            }
+            else
+            {
+                if (view.TryEnterFullScreenMode())
+                {
+
+                }
+                else
+                {
+
+                }
             }
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////

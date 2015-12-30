@@ -61,48 +61,58 @@
                     <ColumnDefinition Width="30*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel x:ConnectionId='9' x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
-                    <AppBarButton x:Uid="Camera" Icon="Camera" Label="Camera" />
+                    <AppBarButton x:ConnectionId='14' x:Uid="Camera" Icon="Camera" Label="Camera"                     />
                     <AppBarToggleButton x:Uid="Account" Icon="Account" Label="Account"/>
-                    <TextBox x:ConnectionId='13' x:Name="word" Width="100" Height="30"></TextBox>
-                    <AppBarButton x:ConnectionId='14' Icon="Find" x:Name="Searchword"                         ></AppBarButton>
-                    <AppBarButton x:ConnectionId='15' Label="findPrevious" Icon="Back"                       />
-                    <AppBarButton x:ConnectionId='16' Icon="Forward" Label="findNext"                     />
+                    <TextBox x:ConnectionId='15' x:Name="word" Width="100" Height="30"></TextBox>
+                    <AppBarButton x:ConnectionId='16' Icon="Find" x:Name="Searchword"                         ></AppBarButton>
+                    <AppBarButton x:ConnectionId='17' Label="findPrevious" Icon="Back"                       />
+                    <AppBarButton x:ConnectionId='18' Icon="Forward" Label="findNext"                     />
                 </StackPanel>
                 <StackPanel x:ConnectionId='10' x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
                     <AppBarButton x:ConnectionId='11' x:Uid="Add" Icon="Add" Label="Add"                     />
                     <AppBarToggleButton x:Uid="Remove" Icon="Remove" Label="Remove"/>
                     <AppBarSeparator/>
                     <AppBarButton x:ConnectionId='12' x:Uid="Delete" Icon="Delete" Label="Delete"                       />
-
+                    <AppBarButton x:ConnectionId='13' Icon="FullScreen"                          />
+                    
                 </StackPanel>
             </Grid>
         </AppBar>
 
     </Page.TopAppBar>
     <Page.BottomAppBar>
-        <CommandBar>
+        <AppBar Background="Transparent">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <!--  
             <CommandBar.SecondaryCommands>
-                <!--
+                
                 <AppBarButton Label="Rotate Left"  Icon="Refresh" Click="Click_BTN_RotateLeft"/>
                 <AppBarButton Label="Rotate Right" Icon="Rotate" Click="Click_BTN_RotateRight"/>
                 <AppBarButton Label="Actual Size" Icon="Add" Click="Click_BTN_ActualSize" />
                 <AppBarButton Label="Fit Width" Icon="Add" Click="Click_BTN_FitWidth" />
                 <AppBarButton Label="Fit Height" Icon="Add" Click="Click_BTN_FitHeight" />
-                -->
+               
             </CommandBar.SecondaryCommands>
-            
-            <AppBarButton x:ConnectionId='17' Icon="Camera" Label="Search"                          />
+             -->
+                <StackPanel  Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
+                    <AppBarButton x:ConnectionId='23' Icon="Page"  Label="page"                           />
+                </StackPanel>
             <!--
             <AppBarButton Label="Previous" Icon="Back" Click="Click_BTN_PrePage"/>
             <AppBarButton Icon="Forward" Label="Next" Click="Click_BTN_NextPage"  />
             -->
-           
-            <AppBarButton x:ConnectionId='18' Icon="ZoomIn" Label="Zoom In "                          IsCompact="True"/>
-            <AppBarButton x:ConnectionId='19' Icon="ZoomOut" Label="Zoom Out"                           IsCompact="True"/>
-            <AppBarButton x:ConnectionId='20' x:Name="note"                    Icon="OpenLocal"  Label="NoteBook" IsCompact="True"/>
-            <AppBarButton x:ConnectionId='21' x:Name="feedback" Icon="Emoji"  Label="FeedBack" IsCompact="True"/>
-
-        </CommandBar>
+                <StackPanel  Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                    <AppBarButton x:ConnectionId='19' Icon="ZoomIn" Label="Zoom In "                          />
+                    <AppBarButton x:ConnectionId='20' Icon="ZoomOut" Label="Zoom Out"                           />
+                    <AppBarButton x:ConnectionId='21' x:Name="note"                    Icon="OpenLocal"  Label="NoteBook" />
+                    <AppBarButton x:ConnectionId='22' x:Name="feedback" Icon="Emoji"  Label="FeedBack" />
+                </StackPanel>
+            </Grid>
+        </AppBar>
     </Page.BottomAppBar>
 </Page>
 
