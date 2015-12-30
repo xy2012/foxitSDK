@@ -1,0 +1,52 @@
+﻿Build started 12/30/2015 12:48:57 PM.
+     1>Project "C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\foxitSDK\foxitSDK.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\foxitSDK\\" /I"Generated Files\\" /IDebug\ /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_APP /D __WRL_NO_DEFAULT_LIB__ /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"pch.h" /Fp"Debug\pch.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /wd28204 /FU"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\store\references\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\1.0.0.0\Windows.Foundation.FoundationContract.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\1.0.0.0\Windows.Foundation.UniversalApiContract.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Networking.Connectivity.WwanContract\1.0.0.0\Windows.Networking.Connectivity.WwanContract.winmd" /analyze- /errorReport:prompt /bigobj pch.cpp
+         pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\foxitSDK\\" /I"Generated Files\\" /IDebug\ /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_APP /D __WRL_NO_DEFAULT_LIB__ /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"pch.h" /Fp"Debug\pch.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /wd28204 /FU"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\store\references\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\1.0.0.0\Windows.Foundation.FoundationContract.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\1.0.0.0\Windows.Foundation.UniversalApiContract.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Networking.Connectivity.WwanContract\1.0.0.0\Windows.Networking.Connectivity.WwanContract.winmd" /analyze- /errorReport:prompt /bigobj SDKDemoCommon.cpp
+         SDKDemoCommon.cpp
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(404): warning C4101: 'textPageTemp': unreferenced local variable
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(430): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(431): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(432): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(433): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(436): warning C4244: 'argument': conversion from 'int' to 'FS_FLOAT', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(463): warning C4244: '=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(464): warning C4244: '=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(465): warning C4244: '=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(466): warning C4244: '=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(522): warning C4101: 'rect': unreferenced local variable
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(801): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(802): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(803): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(804): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(808): warning C4244: 'argument': conversion from 'int' to 'FS_FLOAT', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(876): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(989): warning C4101: 'selectionRect': unreferenced local variable
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1064): warning C4101: 'selectionRect': unreferenced local variable
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1134): warning C4101: 'selectionRect': unreferenced local variable
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1193): warning C4101: 'selectionRect': unreferenced local variable
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1279): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1280): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1281): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1282): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1284): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1285): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1286): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1287): warning C4244: '/=': conversion from 'FS_FLOAT' to 'int', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1291): warning C4244: 'argument': conversion from 'int' to 'FS_FLOAT', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1292): warning C4244: 'argument': conversion from 'int' to 'FS_FLOAT', possible loss of data
+     1>c:\users\v-xiafe\desktop\foxitsdk1.4\foxitsdk\foxitsdk\sdkdemocommon.cpp(1310): warning C4101: 'rect': unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\Debug\foxitSDK\foxitSDK.dll" /INCREMENTAL /NOLOGO WindowsApp.lib /MANIFEST:NO /DEBUG:FASTLINK /PDB:"C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\Debug\foxitSDK\foxitSDK.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /APPCONTAINER /WINMD /WINMDFILE:"C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\Debug\foxitSDK\foxitSDK.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Debug\pch.obj
+         Debug\SDKDemoCommon.obj
+         lib\fsdk_win10_x86.lib
+            Creating library C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\Debug\foxitSDK\foxitSDK.lib and object C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\Debug\foxitSDK\foxitSDK.exp
+         foxitSDK.vcxproj -> C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\Debug\foxitSDK\foxitSDK.dll
+       _GenerateProjectPriFileCore:
+         C:\Program Files (x86)\Windows Kits\10\bin\x64\MakePri.exe New -ProjectRoot C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\foxitSDK\ -ConfigXml Debug\priconfig.xml -OutputFile C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\Debug\foxitSDK\foxitSDK.pri -IndexName foxitSDK -Verbose -Overwrite  
+     1>Done Building Project "C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\foxitSDK\foxitSDK.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.84

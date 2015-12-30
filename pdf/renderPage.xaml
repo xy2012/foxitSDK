@@ -1,0 +1,107 @@
+﻿<Page
+    x:Class="pdf.renderPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pdf"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="0" />
+
+            <ColumnDefinition Width="*" />
+
+            <ColumnDefinition x:Name="currtbook" Width="0" />
+
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Row="0"  Grid.Column="1"  x:Name="scroll_pdf" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ViewChanged="ud_scrollChanged" SizeChanged="ud_scrollSizeChanged">
+            <ScrollViewer.RenderTransform>
+                <CompositeTransform SkewY="0" TranslateY="0"/>
+            </ScrollViewer.RenderTransform>
+            <Grid x:Name="ud_pdfContainer">
+            </Grid>
+        </ScrollViewer>
+
+        <Popup Grid.Row="0"  Grid.Column="0" x:Name="preview_popup" IsLightDismissEnabled="True" RenderTransformOrigin="0.5,0.5" Margin="0,10,10,52" >
+            
+            <Grid x:Name="preview_outer_grid">
+                <ScrollViewer x:Name="preview_scroll" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ViewChanged="Preview_ViewChanged" SizeChanged="Preview_SizeChanged">
+                    <ScrollViewer.RenderTransform>
+                        <CompositeTransform SkewY="0" TranslateY="0"/>
+                    </ScrollViewer.RenderTransform>
+                    <Grid x:Name="preview_grid" Width="160" Background="#FFDBDBDB" HorizontalAlignment="Center">
+                    </Grid>
+                </ScrollViewer>
+
+            </Grid>
+        </Popup>
+        <ScrollViewer Grid.Row="0"  Grid.Column="2">
+
+            <StackPanel x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+    <Page.TopAppBar>
+        <AppBar Background="Transparent" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
+                    <AppBarButton x:Uid="Camera" Icon="Camera" Label="Camera" />
+                    <AppBarToggleButton x:Uid="Account" Icon="Account" Label="Account"/>
+                    <TextBox x:Name="word" Width="100" Height="30"></TextBox>
+                    <AppBarButton Icon="Find" x:Name="Searchword" Click="Searchword_Click"></AppBarButton>
+                    <AppBarButton Label="findPrevious" Icon="Back" Click="Previous_Click"/>
+                    <AppBarButton Icon="Forward" Label="findNext" Click="Next_Click"  />
+                </StackPanel>
+                <StackPanel x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                    <AppBarButton x:Uid="Add" Icon="Add" Label="Add" Click="Newpdf_Click"/>
+                    <AppBarToggleButton x:Uid="Remove" Icon="Remove" Label="Remove"/>
+                    <AppBarSeparator/>
+                    <AppBarButton x:Uid="Delete" Icon="Delete" Label="Delete" Click="closepdf_Click"/>
+
+                </StackPanel>
+            </Grid>
+        </AppBar>
+
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <!--
+                <AppBarButton Label="Rotate Left"  Icon="Refresh" Click="Click_BTN_RotateLeft"/>
+                <AppBarButton Label="Rotate Right" Icon="Rotate" Click="Click_BTN_RotateRight"/>
+                <AppBarButton Label="Actual Size" Icon="Add" Click="Click_BTN_ActualSize" />
+                <AppBarButton Label="Fit Width" Icon="Add" Click="Click_BTN_FitWidth" />
+                <AppBarButton Label="Fit Height" Icon="Add" Click="Click_BTN_FitHeight" />
+                -->
+            </CommandBar.SecondaryCommands>
+            
+            <AppBarButton Icon="Camera" Label="Search" Click="Click_PreviewPage"/>
+            <!--
+            <AppBarButton Label="Previous" Icon="Back" Click="Click_BTN_PrePage"/>
+            <AppBarButton Icon="Forward" Label="Next" Click="Click_BTN_NextPage"  />
+            -->
+           
+            <AppBarButton Icon="ZoomIn" Label="Zoom In " Click="Click_BTN_ZoomIn" IsCompact="True"/>
+            <AppBarButton Icon="ZoomOut" Label="Zoom Out" Click="Click_BTN_ZoomOut" IsCompact="True"/>
+            <AppBarButton x:Name="note" Click="Like_Click" Icon="OpenLocal"  Label="NoteBook" IsCompact="True"/>
+            <AppBarButton x:Name="feedback" Icon="Emoji"  Label="FeedBack" IsCompact="True"/>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
