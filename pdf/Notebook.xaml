@@ -19,7 +19,7 @@
             <ScrollViewer HorizontalScrollBarVisibility="Auto">
                 <StackPanel x:Name="showNotebook"  Orientation="Vertical">
                 </StackPanel>
-            </ScrollViewer>
+           </ScrollViewer>
         </StackPanel>
     </Grid>
 </Page>

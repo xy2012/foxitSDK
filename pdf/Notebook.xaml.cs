@@ -26,7 +26,7 @@ namespace pdf
         public Notebook()
         {
             this.InitializeComponent();
-            string a = "01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01词语 音标&4释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E";
+            string a = "01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01词语 音标&4释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E";
             getNotebook(a);
         }
 
@@ -50,6 +50,7 @@ namespace pdf
                 sub = a.Substring(j+2, i - j-2);
                 s_full = sub + '\n';
                 StackPanel stackpanel;
+                ScrollViewer s_view;
                 while (charArray[j] != 'E')
                 {
                     if (m % 6 == 0)
@@ -151,7 +152,10 @@ namespace pdf
                 Grid g = new Grid();
                 Button close = new Button();
                 TextBlock h = new TextBlock();
-               
+                s_view = new ScrollViewer();
+                //    s_view.HorizontalScrollMode = ScrollMode.Auto;
+                
+                s_view.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
                 g.Margin = new Thickness(12, 12, 12, 12);
                 g.Background = brush;
                 h.Width = 200;
@@ -159,6 +163,9 @@ namespace pdf
                 h.TextWrapping = TextWrapping.Wrap;
                 h.Text = s_full;
                 g.Children.Add(h);
+               
+                
+             //   g.Children.Add(s_view);
                 close.Content = "------";
                 //        close.Tag = m;
                 //        g.Tag = m;
@@ -170,12 +177,15 @@ namespace pdf
                 close.Click += CloseNotebook_Click;
                 close.Background = brush1;
                 g.Children.Add(close);
+               
+                s_view.Content = g;
                 foreach (StackPanel ctl in this.showNotebook.Children)
                 {
                    
                         if (ctl.Name == "Number"+mm)
                         {
-                        ctl.Children.Add(g);
+                            ctl.Children.Add(g);
+                      //  ctl.Children.Add(s_view);
                         m = m + 1;
                     }
                    
