@@ -13,7 +13,6 @@
             <RowDefinition/>
             <RowDefinition Height="0"/>
             <RowDefinition Height="3*"/>
-            <RowDefinition Height="0"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -38,7 +37,8 @@
                </RichTextBlock>
         <RichTextBlockOverflow x:ConnectionId='5' x:Name="FirstLinkedContainer" OverflowContentTarget="{Binding ElementName=ContinuationPageLinkedContainer}" Grid.Row="2" Grid.Column="0"/>
         <RichTextBlockOverflow x:ConnectionId='6' x:Name="ContinuationPageLinkedContainer" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <Image x:ConnectionId='7' Source="ms-appx:///Assets/print_1.png" x:Name="ScenarioImage" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="10"/>
+        <Image x:ConnectionId='7'  x:Name="ScenarioImage" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="10"/>
+       
 
         <StackPanel x:ConnectionId='8' x:Name="Footer" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" Visibility="Collapsed">
            

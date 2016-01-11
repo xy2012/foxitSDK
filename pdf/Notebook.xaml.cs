@@ -46,9 +46,11 @@ namespace pdf
             while (j != a.Length)
             {
                 s_full = "\0";
+                
                 for (i = j; charArray[i] != '&'; i++) { }
                 sub = a.Substring(j+2, i - j-2);
                 s_full = sub + '\n';
+                s_temp = sub + '\n';
                 StackPanel stackpanel;
                 ScrollViewer s_view;
                 while (charArray[j] != 'E')
@@ -99,7 +101,7 @@ namespace pdf
                             S_xinzhi = "more. ";
                             break;
                     }
-                    s_temp = S_xinzhi;
+                    s_temp = s_temp+S_xinzhi;
                     s_full = s_full+S_xinzhi;
                     for (i = j; charArray[i] != '&'; i++)
                     {
@@ -146,7 +148,7 @@ namespace pdf
                             break;
                     }
                     s_full = s_full + '\n';
-                    
+                    s_temp=s_temp + '\n';
                 }
                 j = i + 1;
                 Grid g = new Grid();
@@ -161,7 +163,8 @@ namespace pdf
                 h.Width = 200;
                 h.Height = 150;
                 h.TextWrapping = TextWrapping.Wrap;
-                h.Text = s_full;
+                //      h.Text = s_full;
+                h.Text = s_temp;
                 g.Children.Add(h);
                
                 

@@ -189,7 +189,6 @@ namespace pdf.pdfReader_XamlTypeInfo
 
         private object Activate_3_MainPage() { return new global::pdf.MainPage(); }
         private object Activate_4_Notebook() { return new global::pdf.Notebook(); }
-        private object Activate_5_PageToPrint() { return new global::pdf.PageToPrint(); }
         private object Activate_7_Print() { return new global::pdf.Print(); }
         private object Activate_8_renderPage() { return new global::pdf.renderPage(); }
 
@@ -233,7 +232,6 @@ namespace pdf.pdfReader_XamlTypeInfo
 
             case 5:   //  pdf.PageToPrint
                 userType = new global::pdf.pdfReader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_PageToPrint;
                 userType.AddMemberName("TextContentBlock");
                 userType.SetIsLocalType();
                 xamlType = userType;

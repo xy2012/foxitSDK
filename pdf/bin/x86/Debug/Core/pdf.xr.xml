@@ -145,7 +145,6 @@
     </RootType>
     <RootType FullName="pdf.Notebook" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Source" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
     </RootType>

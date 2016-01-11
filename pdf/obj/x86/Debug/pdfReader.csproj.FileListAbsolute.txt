@@ -1434,3 +1434,5 @@ C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\obj\x86\Debug\PageToPrint.xbf
 C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\obj\x86\Debug\Print.xbf
 C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\print_1.png
 C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\obj\x86\Debug\Core\Assets\print_1.png
+C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\0004.jpg
+C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\obj\x86\Debug\Core\Assets\0004.jpg

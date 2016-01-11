@@ -145,6 +145,7 @@ namespace pdf
             // Add the (newly created) page to the print canvas which is part of the visual tree and force it to go
             // through layout so that the linked containers correctly distribute the content inside them.
             PrintCanvas.Children.Add(firstPage);
+           
             PrintCanvas.InvalidateMeasure();
             PrintCanvas.UpdateLayout();
         }
