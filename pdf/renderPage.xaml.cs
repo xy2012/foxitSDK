@@ -1560,9 +1560,23 @@ namespace pdf
             }
         }
 
-        private void camera_Click(object sender, RoutedEventArgs e)
+        bool flags_print=false;
+        private  void camera_Click(object sender, RoutedEventArgs e)
         {
-            
+            GridLength hh;
+            if (flags_print == false)
+            {
+                hh = new GridLength(100);
+                hidechoice.Height = hh;
+                this.PrintFrame.Navigate(typeof(Print));
+                flags_print = true;
+           }
+            else
+            {
+                hh = new GridLength(0);
+                hidechoice.Height = hh;
+                flags_print = false;
+            }
         }
 
         private void fullscreen_Click(object sender, RoutedEventArgs e)

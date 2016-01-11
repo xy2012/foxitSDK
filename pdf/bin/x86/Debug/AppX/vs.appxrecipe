@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-05T09:57:19.675</Modified>
+      <Modified>2016-01-08T11:45:03.537</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +73,10 @@
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
       <Modified>2015-12-30T04:27:31.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\print_1.png">
+      <PackagePath>Assets\print_1.png</PackagePath>
+      <Modified>2016-01-08T11:40:19.216</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\rainier.jpg">
       <PackagePath>Assets\rainier.jpg</PackagePath>
@@ -150,15 +154,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\entrypoint\pdf.exe">
       <PackagePath>entrypoint\pdf.exe</PackagePath>
-      <Modified>2016-01-05T09:57:18.499</Modified>
+      <Modified>2016-01-08T11:45:02.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK.dll">
       <PackagePath>foxitSDK.dll</PackagePath>
-      <Modified>2016-01-05T09:17:47.593</Modified>
+      <Modified>2016-01-08T11:26:39.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK.winmd">
       <PackagePath>foxitSDK.winmd</PackagePath>
-      <Modified>2016-01-05T09:17:47.258</Modified>
+      <Modified>2016-01-08T11:26:39.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK\lib\fsdk_win10_x86.dll">
       <PackagePath>foxitSDK\lib\fsdk_win10_x86.dll</PackagePath>
@@ -206,11 +210,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\pdf.exe">
       <PackagePath>pdf.exe</PackagePath>
-      <Modified>2016-01-05T09:57:19.670</Modified>
+      <Modified>2016-01-08T11:45:03.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\pdf.xr.xml">
       <PackagePath>pdf.xr.xml</PackagePath>
-      <Modified>2016-01-05T09:29:12.930</Modified>
+      <Modified>2016-01-08T11:38:38.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -218,7 +222,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-05T09:29:13.669</Modified>
+      <Modified>2016-01-08T11:45:03.081</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

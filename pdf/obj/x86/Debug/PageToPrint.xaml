@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="pdf.PageToPrint"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pdf"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:ConnectionId='1' x:Name="PrintableArea">
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0" />
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:ConnectionId='2' x:Name="Header" Grid.Row="0" Grid.ColumnSpan="2" Height="60"  Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" >
+               
+            </StackPanel>
+            <RichTextBlock x:ConnectionId='9' Foreground="Black" x:Name="SdkTitle" FontSize="22" FontWeight="Bold" FontFamily="Segoe UI" >
+              
+            </RichTextBlock>
+        </StackPanel>
+
+        <RichTextBlock x:ConnectionId='3' Foreground="Black" x:Name="TextSelection" FontSize="18" Grid.Row="1"  Grid.ColumnSpan="2" OverflowContentTarget="{Binding ElementName=FirstLinkedContainer}"
+            IsTextSelectionEnabled="True" TextAlignment="Left" FontFamily="Segoe UI" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="Collapsed"/>
+
+        <RichTextBlock x:ConnectionId='4' Foreground="Black" x:Name="TextContent" FontSize="18" Grid.Row="1"  Grid.ColumnSpan="2" OverflowContentTarget="{Binding ElementName=FirstLinkedContainer}"
+            IsTextSelectionEnabled="True" TextAlignment="Left" FontFamily="Segoe UI" VerticalAlignment="Top" HorizontalAlignment="Left">
+               </RichTextBlock>
+        <RichTextBlockOverflow x:ConnectionId='5' x:Name="FirstLinkedContainer" OverflowContentTarget="{Binding ElementName=ContinuationPageLinkedContainer}" Grid.Row="2" Grid.Column="0"/>
+        <RichTextBlockOverflow x:ConnectionId='6' x:Name="ContinuationPageLinkedContainer" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Image x:ConnectionId='7' Source="ms-appx:///Assets/print_1.png" x:Name="ScenarioImage" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="10"/>
+
+        <StackPanel x:ConnectionId='8' x:Name="Footer" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" Visibility="Collapsed">
+           
+        </StackPanel>
+    </Grid>
+</Page>
+

@@ -7,11 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-
+            <RowDefinition x:ConnectionId='1' x:Name="hidechoice" Height="0"/>
             <RowDefinition Height="*"/>
-
+            
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -20,39 +22,48 @@
 
             <ColumnDefinition Width="*" />
 
-            <ColumnDefinition x:ConnectionId='1' x:Name="currtbook" Width="0" />
+            <ColumnDefinition x:ConnectionId='2' x:Name="currtbook" Width="0" />
 
         </Grid.ColumnDefinitions>
-        <ScrollViewer x:ConnectionId='2' Grid.Row="0"  Grid.Column="1"  x:Name="scroll_pdf" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"                                                                  >
+
+        <Frame x:ConnectionId='3' x:Name="PrintFrame" Grid.Row="0"  Grid.Column="1"  Margin="0,5,0,0" >
+           
+        </Frame>
+
+        <ScrollViewer x:ConnectionId='4' Grid.Row="1"  Grid.Column="1"  x:Name="scroll_pdf" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"                                                                  >
             <ScrollViewer.RenderTransform>
                 <CompositeTransform SkewY="0" TranslateY="0"/>
             </ScrollViewer.RenderTransform>
-            <Grid x:ConnectionId='8' x:Name="ud_pdfContainer">
+            <Grid x:ConnectionId='10' x:Name="ud_pdfContainer">
             </Grid>
         </ScrollViewer>
 
-        <Popup x:ConnectionId='3' Grid.Row="0"  Grid.Column="0" x:Name="preview_popup" IsLightDismissEnabled="True" RenderTransformOrigin="0.5,0.5" Margin="0,10,10,52" >
-            
-            <Grid x:ConnectionId='5' x:Name="preview_outer_grid">
-                <ScrollViewer x:ConnectionId='6' x:Name="preview_scroll" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"                                                                    >
+        <Popup x:ConnectionId='5' Grid.Row="1"  Grid.Column="0" x:Name="preview_popup" IsLightDismissEnabled="True" RenderTransformOrigin="0.5,0.5" Margin="0,10,10,52" >
+           
+            <Grid x:ConnectionId='7' x:Name="preview_outer_grid">
+                <ScrollViewer x:ConnectionId='8' x:Name="preview_scroll" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"                                                                    >
                     <ScrollViewer.RenderTransform>
                         <CompositeTransform SkewY="0" TranslateY="0"/>
                     </ScrollViewer.RenderTransform>
-                    <Grid x:ConnectionId='7' x:Name="preview_grid" Width="160" Background="#FFDBDBDB" HorizontalAlignment="Center">
+                    <Grid x:ConnectionId='9' x:Name="preview_grid" Width="160" Background="#FFDBDBDB" HorizontalAlignment="Center">
                     </Grid>
                 </ScrollViewer>
-
+      
             </Grid>
+           
         </Popup>
-        <ScrollViewer Grid.Row="0"  Grid.Column="2">
+        <ScrollViewer Grid.Row="1"  Grid.Column="2">
 
-            <StackPanel x:ConnectionId='4' x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
+            <StackPanel x:ConnectionId='6' x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
 
             </StackPanel>
 
         </ScrollViewer>
-
+        
     </Grid>
+    
+    
+    
     <Page.TopAppBar>
         <AppBar Background="Transparent" >
             <Grid>
@@ -60,20 +71,20 @@
                     <ColumnDefinition Width="30*"/>
                     <ColumnDefinition Width="30*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel x:ConnectionId='9' x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
-                    <AppBarButton x:ConnectionId='14' x:Uid="Camera" Icon="Camera" Label="Camera"                     />
+                <StackPanel x:ConnectionId='11' x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
+                    <AppBarButton x:ConnectionId='16' x:Uid="Camera" Icon="Camera" Label="Camera"                     />
                     <AppBarToggleButton x:Uid="Account" Icon="Account" Label="Account"/>
-                    <TextBox x:ConnectionId='15' x:Name="word" Width="100" Height="30"></TextBox>
-                    <AppBarButton x:ConnectionId='16' Icon="Find" x:Name="Searchword"                         ></AppBarButton>
-                    <AppBarButton x:ConnectionId='17' Label="findPrevious" Icon="Back"                       />
-                    <AppBarButton x:ConnectionId='18' Icon="Forward" Label="findNext"                     />
+                    <TextBox x:ConnectionId='17' x:Name="word" Width="100" Height="30"></TextBox>
+                    <AppBarButton x:ConnectionId='18' Icon="Find" x:Name="Searchword"                         ></AppBarButton>
+                    <AppBarButton x:ConnectionId='19' Label="findPrevious" Icon="Back"                       />
+                    <AppBarButton x:ConnectionId='20' Icon="Forward" Label="findNext"                     />
                 </StackPanel>
-                <StackPanel x:ConnectionId='10' x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
-                    <AppBarButton x:ConnectionId='11' x:Uid="Add" Icon="Add" Label="Add"                     />
+                <StackPanel x:ConnectionId='12' x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                    <AppBarButton x:ConnectionId='13' x:Uid="Add" Icon="Add" Label="Add"                     />
                     <AppBarToggleButton x:Uid="Remove" Icon="Remove" Label="Remove"/>
                     <AppBarSeparator/>
-                    <AppBarButton x:ConnectionId='12' x:Uid="Delete" Icon="Delete" Label="Delete"                       />
-                    <AppBarButton x:ConnectionId='13' Icon="FullScreen"                          />
+                    <AppBarButton x:ConnectionId='14' x:Uid="Delete" Icon="Delete" Label="Delete"                       />
+                    <AppBarButton x:ConnectionId='15' Icon="FullScreen"                          />
                     
                 </StackPanel>
             </Grid>
@@ -99,17 +110,17 @@
             </CommandBar.SecondaryCommands>
              -->
                 <StackPanel  Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
-                    <AppBarButton x:ConnectionId='23' Icon="Page"  Label="page"                           />
+                    <AppBarButton x:ConnectionId='25' Icon="Page"  Label="page"                           />
                 </StackPanel>
             <!--
             <AppBarButton Label="Previous" Icon="Back" Click="Click_BTN_PrePage"/>
             <AppBarButton Icon="Forward" Label="Next" Click="Click_BTN_NextPage"  />
             -->
                 <StackPanel  Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
-                    <AppBarButton x:ConnectionId='19' Icon="ZoomIn" Label="Zoom In "                          />
-                    <AppBarButton x:ConnectionId='20' Icon="ZoomOut" Label="Zoom Out"                           />
-                    <AppBarButton x:ConnectionId='21' x:Name="note"                    Icon="OpenLocal"  Label="NoteBook" />
-                    <AppBarButton x:ConnectionId='22' x:Name="feedback" Icon="Emoji"  Label="FeedBack" />
+                    <AppBarButton x:ConnectionId='21' Icon="ZoomIn" Label="Zoom In "                          />
+                    <AppBarButton x:ConnectionId='22' Icon="ZoomOut" Label="Zoom Out"                           />
+                    <AppBarButton x:ConnectionId='23' x:Name="note"                    Icon="OpenLocal"  Label="NoteBook" />
+                    <AppBarButton x:ConnectionId='24' x:Name="feedback" Icon="Emoji"  Label="FeedBack" />
                 </StackPanel>
             </Grid>
         </AppBar>

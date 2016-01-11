@@ -54,6 +54,9 @@
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\print_1.png">
+      <PackagePath>Assets\print_1.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Assets\rainier.jpg">
       <PackagePath>Assets\rainier.jpg</PackagePath>
     </AppxPackagedFile>

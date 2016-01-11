@@ -7,11 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-
+            <RowDefinition x:Name="hidechoice" Height="0"/>
             <RowDefinition Height="*"/>
-
+            
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -23,7 +25,12 @@
             <ColumnDefinition x:Name="currtbook" Width="0" />
 
         </Grid.ColumnDefinitions>
-        <ScrollViewer Grid.Row="0"  Grid.Column="1"  x:Name="scroll_pdf" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ViewChanged="ud_scrollChanged" SizeChanged="ud_scrollSizeChanged">
+
+        <Frame x:Name="PrintFrame" Grid.Row="0"  Grid.Column="1"  Margin="0,5,0,0" >
+           
+        </Frame>
+
+        <ScrollViewer Grid.Row="1"  Grid.Column="1"  x:Name="scroll_pdf" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ViewChanged="ud_scrollChanged" SizeChanged="ud_scrollSizeChanged">
             <ScrollViewer.RenderTransform>
                 <CompositeTransform SkewY="0" TranslateY="0"/>
             </ScrollViewer.RenderTransform>
@@ -31,8 +38,8 @@
             </Grid>
         </ScrollViewer>
 
-        <Popup Grid.Row="0"  Grid.Column="0" x:Name="preview_popup" IsLightDismissEnabled="True" RenderTransformOrigin="0.5,0.5" Margin="0,10,10,52" >
-            
+        <Popup Grid.Row="1"  Grid.Column="0" x:Name="preview_popup" IsLightDismissEnabled="True" RenderTransformOrigin="0.5,0.5" Margin="0,10,10,52" >
+           
             <Grid x:Name="preview_outer_grid">
                 <ScrollViewer x:Name="preview_scroll" Background="#FFDBDBDB" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ViewChanged="Preview_ViewChanged" SizeChanged="Preview_SizeChanged">
                     <ScrollViewer.RenderTransform>
@@ -41,18 +48,22 @@
                     <Grid x:Name="preview_grid" Width="160" Background="#FFDBDBDB" HorizontalAlignment="Center">
                     </Grid>
                 </ScrollViewer>
-
+      
             </Grid>
+           
         </Popup>
-        <ScrollViewer Grid.Row="0"  Grid.Column="2">
+        <ScrollViewer Grid.Row="1"  Grid.Column="2">
 
             <StackPanel x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
 
             </StackPanel>
 
         </ScrollViewer>
-
+        
     </Grid>
+    
+    
+    
     <Page.TopAppBar>
         <AppBar Background="Transparent" >
             <Grid>
