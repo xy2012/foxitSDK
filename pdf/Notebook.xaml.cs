@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -40,17 +41,17 @@ namespace pdf
             int m = 0,mm=0;
             ImageBrush brush = new ImageBrush();
             ImageBrush brush1 = new ImageBrush();
-            brush.ImageSource = new BitmapImage(
-                        new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
-                   );
+      //      brush.ImageSource = new BitmapImage(
+      //                  new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
+      //             );
             while (j != a.Length)
             {
                 s_full = "\0";
                 
                 for (i = j; charArray[i] != '&'; i++) { }
                 sub = a.Substring(j+2, i - j-2);
-                s_full = sub + '\n';
-                s_temp = sub + '\n';
+                s_full = sub + '\n' + '\n';
+                s_temp = sub + '\n' + '\n';
                 StackPanel stackpanel;
                 ScrollViewer s_view;
                 while (charArray[j] != 'E')
@@ -152,6 +153,10 @@ namespace pdf
                 }
                 j = i + 1;
                 Grid g = new Grid();
+                Border bor = new Border();
+                bor.BorderBrush = new SolidColorBrush(Colors.Aqua);
+                bor.BorderThickness = new Thickness(0.5);
+                g.Children.Add(bor);
                 Button close = new Button();
                 TextBlock h = new TextBlock();
                 s_view = new ScrollViewer();
@@ -163,9 +168,11 @@ namespace pdf
                 h.Width = 200;
                 h.Height = 150;
                 h.TextWrapping = TextWrapping.Wrap;
+                h.Margin= new Thickness(12, 12, 12, 12);
                 //      h.Text = s_full;
                 h.Text = s_temp;
-                g.Children.Add(h);
+             //   bor.Child = h;
+               g.Children.Add(h);
                
                 
              //   g.Children.Add(s_view);
@@ -188,7 +195,7 @@ namespace pdf
                         if (ctl.Name == "Number"+mm)
                         {
                             ctl.Children.Add(g);
-                      //  ctl.Children.Add(s_view);
+                       //ctl.Children.Add(bor);
                         m = m + 1;
                     }
                    

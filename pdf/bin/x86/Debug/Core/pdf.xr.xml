@@ -63,15 +63,10 @@
       <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="pdf.ContinuationPage" />
-    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="ImageSource" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
       <RootProperty Name="MinWidth" />
       <RootProperty Name="DisplayMode" />
       <RootProperty Name="CompactPaneLength" />
-      <RootProperty Name="PaneBackground" />
       <RootProperty Name="Pane" />
       <RootProperty Name="Content" />
     </RootType>
@@ -96,7 +91,6 @@
       <RootProperty Name="MinWidth" />
       <RootProperty Name="TextTrimming" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Inlines" />
     </RootType>

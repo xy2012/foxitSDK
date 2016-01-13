@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Navigation;
 using foxitSDK;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.ViewManagement;
+using Windows.UI;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 /*
@@ -1422,9 +1423,9 @@ namespace pdf
             int m = 0;
             ImageBrush brush = new ImageBrush();
             ImageBrush brush1 = new ImageBrush();
-            brush.ImageSource = new BitmapImage(
-                        new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
-                   );
+        //    brush.ImageSource = new BitmapImage(
+        //                new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
+        //           );
             while (j != a.Length)
             {
                 s_full = "\0";
@@ -1523,12 +1524,16 @@ namespace pdf
                 Grid g = new Grid();
                 Button close = new Button();
                 TextBlock h = new TextBlock();
-
+                Border bor = new Border();
+                bor.BorderBrush = new SolidColorBrush(Colors.Aqua);
+                bor.BorderThickness = new Thickness(0.5);
+                g.Children.Add(bor);
                 g.Margin = new Thickness(12, 12, 12, 12);
                 g.Background = brush;
                 h.Width = 200;
                 h.Height = 150;
                 h.TextWrapping = TextWrapping.Wrap;
+                h.Margin = new Thickness(12, 12, 12, 12);
                 h.Text = s_full;
                 g.Children.Add(h);
                 close.Content = "------";

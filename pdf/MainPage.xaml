@@ -8,15 +8,11 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="UniformToFill"  ImageSource="ms-appx:///Assets/0001.jpg"/>
-        </Grid.Background>
+        
         <SplitView x:Name="View"   MinWidth="0"
                    DisplayMode="CompactOverlay" 
                    CompactPaneLength="50">
-            <SplitView.PaneBackground>
-                <ImageBrush Stretch="UniformToFill"  ImageSource="ms-appx:///Assets/0001.jpg"/>
-            </SplitView.PaneBackground>
+            
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -99,7 +95,7 @@
             <RelativePanel>
                 <Frame x:Name="ScenarioFrame" Margin="0,5,0,0" RelativePanel.AlignTopWithPanel="True" RelativePanel.Above="StatusPanel"/>
                 <StackPanel x:Name="StatusPanel" Orientation="Vertical" RelativePanel.AlignBottomWithPanel="True">
-                    <TextBlock x:Name="StatusLabel" Margin="41,0,-1.333,10" TextWrapping="Wrap" Text="Status:" Height="148" />
+                    <TextBlock x:Name="StatusLabel" Margin="41,0,-1.333,10" TextWrapping="Wrap" Text=" " Height="148" />
                     <Border x:Name="StatusBorder" Margin="0,0,0,0" Visibility="Collapsed" >
                         <TextBlock x:Name="StatusBlock"  FontWeight="Bold" MaxHeight="200" MinWidth="{Binding ActualWidth, ElementName=Splitter}" TextTrimming="CharacterEllipsis"  Margin="20,10,10,20" TextWrapping="Wrap"/>
                     </Border>
