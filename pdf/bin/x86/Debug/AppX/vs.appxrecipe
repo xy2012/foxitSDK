@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-13T04:29:43.137</Modified>
+      <Modified>2016-01-13T10:14:40.966</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -158,7 +158,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\entrypoint\pdf.exe">
       <PackagePath>entrypoint\pdf.exe</PackagePath>
-      <Modified>2016-01-13T04:29:41.797</Modified>
+      <Modified>2016-01-13T10:14:40.252</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK.dll">
       <PackagePath>foxitSDK.dll</PackagePath>
@@ -214,11 +214,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\pdf.exe">
       <PackagePath>pdf.exe</PackagePath>
-      <Modified>2016-01-13T04:29:43.132</Modified>
+      <Modified>2016-01-13T10:14:40.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\pdf.xr.xml">
       <PackagePath>pdf.xr.xml</PackagePath>
-      <Modified>2016-01-13T04:23:00.523</Modified>
+      <Modified>2016-01-13T10:10:53.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -226,7 +226,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-13T04:23:01.412</Modified>
+      <Modified>2016-01-13T10:11:22.456</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK1.4\foxitSDK\pdf\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

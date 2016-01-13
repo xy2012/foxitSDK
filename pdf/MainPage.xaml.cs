@@ -93,7 +93,9 @@ namespace pdf
                 case 0:
                     this.ScenarioFrame.Navigate(typeof(Notebook));
                     break;
-               
+                case 1:
+                    this.Frame.Navigate(typeof(MainPage));
+                    break;
                 default:
                     break;
             }

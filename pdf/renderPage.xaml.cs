@@ -1390,7 +1390,7 @@ namespace pdf
 
         private void closepdf_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         public bool flag_notebook = false;

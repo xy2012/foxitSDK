@@ -93,7 +93,9 @@
             </SplitView.Pane>
 
             <RelativePanel>
-                <Frame x:ConnectionId='5' x:Name="ScenarioFrame" Margin="0,5,0,0" RelativePanel.AlignTopWithPanel="True" RelativePanel.Above="StatusPanel"/>
+                <Frame x:ConnectionId='5' x:Name="ScenarioFrame" Margin="0,5,0,0" RelativePanel.AlignTopWithPanel="True" RelativePanel.Above="StatusPanel">
+                    <TextBlock x:ConnectionId='10' x:Name="StatusBlock1" Text="test " FontWeight="Bold" MaxHeight="200" MinWidth="{Binding ActualWidth, ElementName=Splitter}" TextTrimming="CharacterEllipsis"  Margin="20,10,10,20" TextWrapping="Wrap"/>
+                </Frame>
                 <StackPanel x:ConnectionId='6' x:Name="StatusPanel" Orientation="Vertical" RelativePanel.AlignBottomWithPanel="True">
                     <TextBlock x:ConnectionId='7' x:Name="StatusLabel" Margin="41,0,-1.333,10" TextWrapping="Wrap" Text=" " Height="148" />
                     <Border x:ConnectionId='8' x:Name="StatusBorder" Margin="0,0,0,0" Visibility="Collapsed" >
