@@ -1398,7 +1398,7 @@ namespace pdf
         {
             if (flag_notebook == false)
             {
-                string a = "01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01词语 音标&4释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E";
+                string a = "01word pron&1释义$$一个很长的释义$$一个很长的释义$$一个很长的释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01词语 音标&4释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E";
                 getNotebook(a);
                 flag_notebook = true;
             }
@@ -1423,16 +1423,16 @@ namespace pdf
             int m = 0;
             ImageBrush brush = new ImageBrush();
             ImageBrush brush1 = new ImageBrush();
-        //    brush.ImageSource = new BitmapImage(
-        //                new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
-        //           );
+            brush.ImageSource = new BitmapImage(
+                       new Uri("ms-appx:///Assets/001.png", UriKind.RelativeOrAbsolute)
+                   );
             while (j != a.Length)
             {
                 s_full = "\0";
                 for (i = j; charArray[i] != '&'; i++) { }
                 sub = a.Substring(j + 2, i - j - 2);
-                s_full = sub + '\n';
-
+                s_full = sub + '\n' + '\n';
+                s_temp = sub + '\n' + '\n';
                 while (charArray[j] != 'E')
                 {
                     j = i + 2;
@@ -1471,7 +1471,7 @@ namespace pdf
                             S_xinzhi = "more. ";
                             break;
                     }
-                    s_temp = S_xinzhi;
+                    s_temp = s_temp + S_xinzhi;
                     s_full = s_full + S_xinzhi;
                     for (i = j; charArray[i] != '&'; i++)
                     {
@@ -1518,35 +1518,119 @@ namespace pdf
                             break;
                     }
                     s_full = s_full + '\n';
-
+                    s_temp = s_temp + '\n';
                 }
                 j = i + 1;
                 Grid g = new Grid();
                 Button close = new Button();
+                Button delete = new Button();
                 TextBlock h = new TextBlock();
                 Border bor = new Border();
+                Button more = new Button();
+                more.HorizontalAlignment = HorizontalAlignment.Right;
+                more.VerticalAlignment = VerticalAlignment.Bottom;
+                more.Content = "more";
+                more.Name = "name" + m+"^"+s_full+'^'+s_temp;
+                more.Foreground = brush;
+                more.Background = brush1;
+                more.Click += FULL_Click;
+                g.Children.Add(h);
+                g.Children.Add(more);
+               
                 bor.BorderBrush = new SolidColorBrush(Colors.Aqua);
                 bor.BorderThickness = new Thickness(0.5);
                 g.Children.Add(bor);
                 g.Margin = new Thickness(12, 12, 12, 12);
-                g.Background = brush;
+
+                
+                
                 h.Width = 200;
                 h.Height = 150;
                 h.TextWrapping = TextWrapping.Wrap;
                 h.Margin = new Thickness(12, 12, 12, 12);
-                h.Text = s_full;
-                g.Children.Add(h);
+                h.Text = s_temp;
+            //    h.LineHeight = 5;
+
                 close.Content = "------";
                 close.Name = "name" + m;
-                g.Name = "name" + m;
+                g.Name = "name" + m ;
+                h.Name = "name" + m + "^" + s_full;
                 close.HorizontalAlignment = HorizontalAlignment.Right;
                 close.VerticalAlignment = VerticalAlignment.Top;
+
                 close.Height = 25;
                 close.Click += Closeunit_Click;
                 close.Background = brush1;
                 g.Children.Add(close);
+
+                delete.Name = s_temp.Split(' ')[0];
+                delete.Content = "delete";
+                delete.HorizontalAlignment = HorizontalAlignment.Left;
+                delete.VerticalAlignment = VerticalAlignment.Bottom;
+                delete.Height = 35;
+                delete.Click += delete_Click;
+                delete.Background = brush1;
+                g.Children.Add(delete);
+
                 currentNotebook.Children.Add(g);
                 m = m + 1;
+            }
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            //delete  btn.Name
+        }
+
+        public bool more_flags = false;
+
+        private void FULL_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            string[] Name;
+            if (more_flags == false)
+            {
+                foreach (Grid gri in this.currentNotebook.Children)
+                {
+                    Name = btn.Name.Split('^');
+                    if (gri.Name == Name[0])
+                    {
+
+                        foreach (TextBlock txt in gri.Children)
+                        {
+                            txt.Text = Name[1];
+                            gri.Height = 300;
+                            txt.Height = 300;
+                            break;
+                        }
+                        break;
+                    }
+
+                }
+                more_flags = true;
+            }
+            else
+            {
+                foreach (Grid gri in this.currentNotebook.Children)
+                {
+                    Name = btn.Name.Split('^');
+                    if (gri.Name == Name[0])
+                    {
+
+                        foreach (TextBlock txt in gri.Children)
+                        {
+                            txt.Text = Name[2];
+                            gri.Height = 150;
+                            txt.Height = 150;
+                            break;
+                        }
+                        break;
+                    }
+
+                }
+                more_flags = false;
             }
         }
 
@@ -1560,6 +1644,7 @@ namespace pdf
                 if (gri.Name == btn.Name)
                 {
                     gri.Visibility = Visibility.Collapsed;
+                    break;
                 }
 
             }
